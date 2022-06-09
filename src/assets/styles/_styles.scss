@@ -27,7 +27,7 @@ header.header {
             text-transform: uppercase;
             border-radius: 0;
             padding: 29.5px 53px;
-            border-left: 1px solid #4E5057;
+            border-left: 1px solid #4e5057;
         }
 
         .btn {
@@ -42,5 +42,43 @@ header.header {
             justify-content: center;
             text-transform: uppercase;
         }
+    }
+}
+
+footer {
+    .footer-top-bar {
+        background-color: $darker;
+        padding: 50px 0;
+
+        .btn {
+            padding: 19px 16px;
+        }
+    }
+
+    .footer-middle-bar {
+        background-color: $dark;
+        padding: 87px 0 55px;
+
+        .description {
+            font-family: $font-poppins;
+            color: $white;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.3rem; //19px
+            padding: 22px 0;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 0.875rem;
+            }
+        }
+
+        hr {
+            background-color: $grey;
+        }
+    }
+
+    .footer-bottom-bar {
+        padding: 36px 0;
+        background-color: $black;
     }
 }
