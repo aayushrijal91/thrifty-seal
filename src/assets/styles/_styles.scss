@@ -59,13 +59,49 @@ footer {
         background-color: $dark;
         padding: 87px 0 55px;
 
+        .footer-column {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: $white;
+                font-size: 1.125rem;
+                margin-bottom: 11px;
+                text-transform: uppercase;
+            }
+
+            ul li,
+            ol li,
+            p {
+                color: $grey;
+                font-size: 1rem;
+                padding: 11px 0;
+
+                a {
+                    color: $grey;
+                }
+            }
+        }
+
+        .social-column {
+            .sub-social {
+                padding: 11px 0;
+
+                a {
+                    color: $grey;
+                }
+            }
+        }
+
         .description {
             font-family: $font-poppins;
             color: $white;
             text-align: center;
             font-weight: 500;
             font-size: 1.3rem; //19px
-            padding: 22px 0;
+            padding: 101px 0 22px;
 
             @include media-breakpoint-down(sm) {
                 font-size: 0.875rem;

@@ -24,7 +24,73 @@ $logo = get_field('logo', 'options');
     </div>
     <div class="footer-middle-bar">
         <div class="container">
-            <div class="description">Once you book in your <span class="fw-800 text-primary">FREE ONSITE QUOTE</span>, Thrifty Seal will come to your home & give you an on-the-spot assessment & price with no hidden extras.</div>
+            <div class="row justify-content-between">
+                <div class="col-6 col-md-4 col-xl">
+                    <div class="footer-column">
+                        <?php
+                        if (is_active_sidebar('footer_column_1')) {
+                            dynamic_sidebar('footer_column_1');
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl">
+                    <div class="footer-column">
+                        <?php
+                        if (is_active_sidebar('footer_column_2')) {
+                            dynamic_sidebar('footer_column_2');
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl">
+                    <div class="footer-column">
+                        <?php
+                        if (is_active_sidebar('footer_column_3')) {
+                            dynamic_sidebar('footer_column_3');
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl">
+                    <div class="footer-column">
+                        <?php
+                        if (is_active_sidebar('footer_column_4')) {
+                            dynamic_sidebar('footer_column_4');
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl">
+                    <div class="footer-column">
+                        <?php
+                        if (is_active_sidebar('footer_column_5')) {
+                            dynamic_sidebar('footer_column_5');
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl">
+                    <div class="social-column">
+                        <?php if (have_rows('social_media', 'option')) : ?>
+                            <?php while (have_rows('social_media', 'option')) : the_row();
+                                $social_icon = get_sub_field('social_icon');
+                                $social_url = get_sub_field('social_media_url');
+                                $username = get_sub_field('username');
+                            ?>
+                                <div class="sub-social">
+                                    <a href="<?= $social_url['url'] ?>" class="social-icon" target="_blank">
+                                        <img src="<?= $social_icon['url'] ?>" class="pr-3" alt="<?= $social_icon['alt'] ?>"><?= $username ?>
+                                    </a>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="description">Once you book in your <span class="fw-800 text-primary">FREE ONSITE QUOTE,</span> Thrifty Seal will come to your home & give you an on-the-spot assessment & price with no hidden extras.</div>
             <hr>
             <div class="row justify-content-between align-items-center">
                 <div class="col-auto"><a class="navbar" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a></div>
