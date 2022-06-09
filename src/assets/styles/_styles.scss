@@ -1,3 +1,46 @@
 @function imgUrl($file, $path: "background") {
     @return url("../images/" + $path + "/" + $file) no-repeat;
 }
+
+header.header {
+    .header-top-bar {
+        background: $darker;
+
+        .btn {
+            height: 98.85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0;
+        }
+
+        .social-icon {
+            padding: 8px 15px;
+        }
+    }
+
+    .header-bottom-bar {
+        background: $dark;
+
+        .nav-link {
+            color: $white;
+            text-transform: uppercase;
+            border-radius: 0;
+            padding: 29.5px 53px;
+            border-left: 1px solid #4E5057;
+        }
+
+        .btn {
+            font-weight: 500;
+            color: $white;
+            border-radius: 0;
+            padding: 16px;
+            line-height: 1;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+    }
+}

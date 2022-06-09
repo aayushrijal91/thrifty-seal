@@ -130,16 +130,15 @@ textarea.form-control {
     padding-top: 1.25rem;
 }
 
-//Go To Top
 #return-to-top {
     position: fixed;
     bottom: 95px;
     right: 13px;
     z-index: 9;
     background: $primary;
+    color: $white;
     width: 50px;
     height: 50px;
-    display: block;
     text-decoration: none;
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
@@ -150,24 +149,4 @@ textarea.form-control {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-}
-
-#return-to-top img {
-    margin: 0;
-    position: relative;
-    left: 13px;
-    top: 10px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-#return-to-top:hover {
-    background: rgba(0, 0, 0, 0.9);
-}
-
-#return-to-top:hover img {
-    top: 4px;
 }
