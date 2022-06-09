@@ -45,6 +45,73 @@ header.header {
     }
 }
 
+section.solutions {
+    .problem-top,
+    .solved-top {
+        font-size: 1.4375rem; //23px
+        text-align: center;
+        padding: 24.9px 16px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1rem;
+        }
+    }
+
+    .problem-top {
+        background: $black;
+        color: $white;
+    }
+
+    .solved-top {
+        background: $secondary;
+        color: $primary;
+    }
+
+    .problem {
+        background: imgUrl("problem.jpg");
+        background-size: cover;
+        color: $white;
+        padding: 38px 60px;
+        height: 100%;
+
+        ul.problem-list {
+            padding-top: 14px;
+
+            li {
+                font-size: 1.75rem; //28px
+                padding: 21px 0;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .solved {
+        background: imgUrl("solved.jpg");
+        background-size: cover;
+        color: $black;
+        text-align: right;
+        padding: 38px 60px;
+        height: 100%;
+
+        ul.solved-list {
+            padding-top: 14px;
+
+            li {
+                font-size: 1.75rem; //28px
+                padding: 21px 0;
+                font-weight: 500;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
 footer {
     .footer-top-bar {
         background-color: $darker;
@@ -60,6 +127,13 @@ footer {
         padding: 87px 0 55px;
 
         .footer-column {
+            // list-style: none !important;
+
+            // ul,
+            // ol {
+            //     list-style: none !important;
+            // }
+
             h1,
             h2,
             h3,
