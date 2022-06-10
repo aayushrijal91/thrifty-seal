@@ -60,11 +60,19 @@ section.solutions {
     .problem-top {
         background: $black;
         color: $white;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .solved-top {
         background: $secondary;
         color: $primary;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .problem {
@@ -72,7 +80,7 @@ section.solutions {
         background-size: cover;
         color: $white;
         padding: 38px 60px;
-        height: 100%;
+        min-height: 587.8px;
 
         ul.problem-list {
             padding-top: 14px;
@@ -94,7 +102,7 @@ section.solutions {
         color: $black;
         text-align: right;
         padding: 38px 60px;
-        height: 100%;
+        min-height: 587.8px;
 
         ul.solved-list {
             padding-top: 14px;
