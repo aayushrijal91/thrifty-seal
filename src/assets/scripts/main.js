@@ -1,3 +1,5 @@
+Cocoen.parse(document.body);
+
 // ie: Engine.ui.misc();
 jQuery(function ($) {
     "use strict";

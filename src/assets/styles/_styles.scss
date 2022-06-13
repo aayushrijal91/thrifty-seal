@@ -46,6 +46,8 @@ header.header {
 }
 
 section.services {
+    padding : 38px 0 64px;
+
     .services__list {
         .service {
             background-color: $primary;
@@ -118,6 +120,7 @@ section.services {
         }
     }
 }
+
 section.solutions {
     .problem-top,
     .solved-top {
@@ -190,6 +193,16 @@ section.solutions {
                 }
             }
         }
+    }
+}
+
+section.compare-slider {
+    padding: 61px 0;
+    
+    .before-img,
+    .after-img {
+        object-fit: cover;
+        height: 100%;
     }
 }
 
