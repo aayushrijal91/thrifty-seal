@@ -3,6 +3,10 @@
 }
 
 header.header {
+    img {
+        max-width: 100%;
+    }
+
     .header-top-bar {
         background: $darker;
 
@@ -45,8 +49,52 @@ header.header {
     }
 }
 
+section.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    padding: 126.48px 0;
+
+    h1 {
+        font-weight: 800;
+        color: $white;
+        text-align: center;
+        font-size: 3.75rem; //60px
+        letter-spacing: -0.01em;
+        line-height: 1.48;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1rem;
+        }
+
+        span {
+            color: $primary;
+        }
+    }
+
+    .subtitle {
+        font-size: 1.8125rem; //29px
+        text-transform: uppercase;
+        color: $grey;
+        font-weight: 400;
+        padding-top: 50px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1rem;
+        }
+    }
+
+    &.front-page {
+        padding: 88.67px 0 290.19px;
+    }
+}
+
 section.services {
-    padding : 38px 0 64px;
+    padding: 38px 0 64px;
+
+    img {
+        max-width: 100%;
+    }
 
     .services__list {
         .service {
@@ -122,6 +170,10 @@ section.services {
 }
 
 section.solutions {
+    img {
+        max-width: 100%;
+    }
+
     .problem-top,
     .solved-top {
         font-size: 1.4375rem; //23px
@@ -198,7 +250,7 @@ section.solutions {
 
 section.compare-slider {
     padding: 61px 0;
-    
+
     .before-img,
     .after-img {
         object-fit: cover;
@@ -207,6 +259,10 @@ section.compare-slider {
 }
 
 footer {
+    img {
+        max-width: 100%;
+    }
+
     .footer-top-bar {
         background-color: $darker;
         padding: 50px 0;
