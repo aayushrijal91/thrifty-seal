@@ -633,7 +633,7 @@ section.faq {
         background: $darker-grey;
         display: none;
         padding: 24px 1rem;
-        
+
         p {
             line-height: 2;
             color: $light;
@@ -642,16 +642,29 @@ section.faq {
             @include media-breakpoint-up(md) {
                 font-size: 1.125rem;
             }
-            
+
             @include media-breakpoint-down(sm) {
                 font-size: 0.875rem;
             }
         }
-        
+
         @include media-breakpoint-up(md) {
             padding: 34px 24px;
         }
-        
+    }
+}
+
+section.quick-contact {
+    .quick-contact-main {
+        background: $primary;
+        padding: 55.5px 0 43px;
+
+        .heroHeading {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.111;
+            font-size: 3.929375rem;
+        }
     }
 }
 
