@@ -72,21 +72,24 @@ $the_query = new WP_Query($args);
                 $count = 0;
             ?>
                 <div class="arealistwrap">
-                    <div class="row">
-                        <?php foreach (range('A', 'Z') as $char) {
-                            if (isset($htm3[$char]) && $htm3[$char] != '') {
-                        ?>
-                                <div class="col-lg-4 col-md-6 arealist char<?= $char ?> <?php echo ($count > 5) ? 'arealisthide' : ''; ?> ">
-                                    <h3 class="alphabet-title font-weight-bold"><?= $char ?></h3>
-                                    <ul>
-                                        <?php echo $htm3[$char]; ?>
-                                    </ul>
-                                    <div class="mbottom "></div>
+                    <?php foreach (range('A', 'Z') as $char) {
+                        if (isset($htm3[$char]) && $htm3[$char] != '') {
+                    ?>
+                            <div class="arealist char<?= $char ?> <?php echo ($count > 5) ? 'arealisthide' : ''; ?>">
+                                <div class="row">
+                                    <div class="col-auto pr-xl-5">
+                                        <h3 class="alphabet-title"><?= $char ?></h3>
+                                    </div>
+                                    <div class="col pl-xxl-3">
+                                        <ul>
+                                            <?php echo $htm3[$char]; ?>
+                                        </ul>
+                                    </div>
                                 </div>
-                        <?php $count++;
-                            }
-                        } ?>
-                    </div>
+                            </div>
+                    <?php $count++;
+                        }
+                    } ?>
                 </div>
                 <div class="noresult">No Result Found.</div>
                 <div class="areas_loadMoreWrap "><a href="javascript:void(0)" class="areas_loadMoreBtn">Load More</a></div>
