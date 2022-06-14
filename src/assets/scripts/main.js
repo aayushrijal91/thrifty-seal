@@ -10,7 +10,63 @@ jQuery(function ($) {
                     duration: 1500,
                 });
                 $(() => {
+                    if ($(".arealist:visible").length)
+                        $(".noresult").hide();
+                    else
+                        $(".noresult").show();
 
+                    $(".areas_loadMoreBtn").on('click', function () {
+                        $(".arealist").show();
+                        $(".areas_loadMoreWrap").remove();
+                    });
+
+                    $(".areas_alphabet").on('click', function () {
+                        $(this).siblings().removeClass("active");
+                        $(this).addClass("active");
+                        $(".all-list").hide();
+                        $(".arealist").show();
+                        let chr = $(this).text();
+                        $(".arealist").hide();
+                        $(".char" + chr).show();
+                        $(".areas_loadMoreWrap").remove();
+
+                        if ($(".arealist:visible").length)
+                            $(".noresult").hide();
+                        else
+                            $(".noresult").show();
+                    });
+                    $(".areas_allSearch").on('click', function () {
+                        $(this).siblings().removeClass("active");
+                        $(this).addClass("active");
+                        $(".all-list").show();
+                        $(".arealist").show();
+                        $(".noresult").hide();
+                    });
+
+
+                    $('.arealist ul').each(function () {
+                        var max = 19
+                        if ($(this).find("li").length > max) {
+                            $(this)
+                                .find('li:gt(19)')
+                                .hide()
+                                .end()
+                                .append(
+                                    $('<li class="show-more mt-3">Show More</li>').click(function () {
+                                        $(this).siblings(':hidden').show().end().remove();
+                                    })
+                                );
+                        }
+                    });
+
+                    $('.areas_droplist > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.areas_droplist > .list > .item').on('click', function () {
+                        $('.areas_droplist > .list > .item').removeClass('active selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').text($(this).text());
+                    });
                 });
             }, // end misc
         }, // end ui
