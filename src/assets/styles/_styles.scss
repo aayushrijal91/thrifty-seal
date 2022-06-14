@@ -529,7 +529,50 @@ section.solutions {
     }
 }
 
+section.suburb {
+    background: $white;
+    padding: 114px 0 45px;
+
+    .heading {
+        color: $darker-grey;
+        font-weight: 700;
+        font-size: 4rem;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 2rem;
+        }
+    }
+
+    .suburb-description-card {
+        padding: 75px 0;
+
+        .sub-heading {
+            color: $primary;
+            letter-spacing: -0.02em;
+            font-size: 2.25rem;
+            font-weight: 700;
+            padding-bottom: 41px;
+        }
+
+        p {
+            color: $grey;
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 1.67;
+            
+            @include media-breakpoint-up(xxl) {
+                padding-right: 100px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
+
 section.compare-slider {
+    background: rgba(40, 41, 45, 0.04);
     padding: 61px 0;
 
     .before-img,
