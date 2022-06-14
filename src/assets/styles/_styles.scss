@@ -559,7 +559,7 @@ section.suburb {
             font-size: 1.125rem;
             font-weight: 500;
             line-height: 1.67;
-            
+
             @include media-breakpoint-up(xxl) {
                 padding-right: 100px;
             }
@@ -568,6 +568,90 @@ section.suburb {
                 font-size: 0.875rem;
             }
         }
+    }
+}
+
+section.faq {
+    padding: 64px 0;
+    background: rgba(40, 41, 45, 0.04);
+
+    .heading {
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        font-size: 2.25rem;
+        color: $black;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 112px 0;
+    }
+
+    button:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .accordion-card {
+        margin: 35px 0;
+    }
+
+    .accordion-container {
+        width: 100%;
+    }
+
+    .accordion-head {
+        background-color: $white;
+        color: $dark;
+        cursor: pointer;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding: 1rem;
+        transition: 0.2s all;
+        font-size: 1.125rem;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.5rem; // 24px
+            padding: 32px 23px;
+        }
+
+        &.active {
+            background-color: $jet-black;
+            color: $white;
+        }
+
+        .main-question {
+            @include media-breakpoint-down(sm) {
+                max-width: 95%;
+            }
+        }
+    }
+
+    .accordion-body {
+        background: $darker-grey;
+        display: none;
+        padding: 24px 1rem;
+        
+        p {
+            line-height: 2;
+            color: $light;
+            font-size: 1rem; // 16px
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.125rem;
+            }
+            
+            @include media-breakpoint-down(sm) {
+                font-size: 0.875rem;
+            }
+        }
+        
+        @include media-breakpoint-up(md) {
+            padding: 34px 24px;
+        }
+        
     }
 }
 
