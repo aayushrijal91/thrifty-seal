@@ -21,7 +21,7 @@ $args = array(
 $the_query = new WP_Query($args);
 ?>
 <section class="areas">
-    <section class="areatop bg-areas-light">
+    <section class="areatop bg-primary">
         <div class="container">
             <?php  // The Loop
             if ($the_query->have_posts()) {
@@ -40,19 +40,27 @@ $the_query = new WP_Query($args);
                 </div>
 
                 <div class="alphbetwrap d-none d-md-block" data-aos="fade-up">
-                    <div class="areas_allSearch active">ALL</div>
-                    <?php foreach (range('A', 'Z') as $char) {
-                        $htm3[$char] = '';
-                    ?>
-                        <div class="areas_alphabet"><?= $char ?></div>
-                    <?php while ($the_query->have_posts()) : $the_query->the_post();
-                            $suburb_name = str_replace("Plumber ", '', get_the_title());
-                            if (strpos($suburb_name, $char) === 0) {
-                                $liclass = str_replace(' ', '-', strtolower($suburb_name));
-                                $htm3[$char] .= '<li class="' . $liclass . '"><a href="' . get_site_url() . "/areas/plumber-" . $liclass . '">' . $suburb_name . '</a></li>';
-                            }
-                        endwhile;
-                    } ?>
+                    <div class="row no-gutters">
+                        <div class="col-auto pr-xl-5">
+                            <div class="areas_allSearch active">Show All</div>
+                        </div>
+                        <div class="col pl-xxl-3">
+                            <?php foreach (range('A', 'Z') as $char) {
+                                $htm3[$char] = '';
+                            ?>
+                                <div class="areas_alphabet">
+                                    <div class="areas_alphabet_inner"><?= $char ?></div>
+                                </div>
+                            <?php while ($the_query->have_posts()) : $the_query->the_post();
+                                    $suburb_name = str_replace("Plumber ", '', get_the_title());
+                                    if (strpos($suburb_name, $char) === 0) {
+                                        $liclass = str_replace(' ', '-', strtolower($suburb_name));
+                                        $htm3[$char] .= '<li class="' . $liclass . '"><a href="' . get_site_url() . "/areas/plumber-" . $liclass . '">' . 'Plumber ' . $suburb_name . '</a></li>';
+                                    }
+                                endwhile;
+                            } ?>
+                        </div>
+                    </div>
                 </div>
             <?php } ?>
         </div>

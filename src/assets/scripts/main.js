@@ -25,7 +25,7 @@ jQuery(function ($) {
                         $(this).addClass("active");
                         $(".all-list").hide();
                         $(".arealist").show();
-                        let chr = $(this).text();
+                        let chr = $(this).find('.areas_alphabet_inner').text();
                         $(".arealist").hide();
                         $(".char" + chr).show();
                         $(".areas_loadMoreWrap").remove();

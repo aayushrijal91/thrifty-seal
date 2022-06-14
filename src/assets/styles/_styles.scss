@@ -178,12 +178,14 @@ section.areas {
         }
 
         .heading {
-            font-size: 2.25rem;
-            font-weight: 500;
+            font-size: 4rem;
+            font-weight: 700;
+            color: $white;
+            letter-spacing: -0.02em;
+            padding-bottom: 48px;
 
             @include media-breakpoint-down(sm) {
                 font-size: 2rem;
-                font-weight: 700;
             }
         }
 
@@ -210,48 +212,62 @@ section.areas {
             padding: 0;
 
             .areas_allSearch {
-                display: inline-block;
                 background-color: $white;
                 text-align: center;
-                background-color: $white;
-                margin-right: 1.2rem;
-                font-size: 1rem;
-                font-weight: bold;
-                padding: 0.713rem 1.688rem;
-                color: #3c4a5a;
+                font-size: 1.5rem;
+                font-weight: 700;
+                padding: 8px 27px;
+                color: $primary;
                 cursor: pointer;
-                margin-right: 0.214rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 66px;
             }
 
             .areas_alphabet {
                 display: inline-block;
-                background-color: $white;
-                color: #3c4a5a;
-                text-align: center;
                 margin-bottom: 0.5rem;
                 margin-right: 0.214rem;
-                cursor: pointer;
-                font-size: 1rem;
-                padding: 0.713rem 1.45rem;
-                text-transform: uppercase;
-                font-weight: bold;
-                transition: 0.35s all ease;
-
-                &:hover {
+                
+                .areas_alphabet_inner {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255,255,255,0.05);
                     color: $white;
-                    background-color: $primary;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    padding: 8px;
+                    height: 66px;
+                    width: 66px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    transition: 0.35s all ease;
+
+                    &:hover {
+                        color: $primary;
+                        background-color: $white;
+                    }
+                }
+
+                &.active {
+                    .areas_alphabet_inner{
+                        background-color: $white;
+                        color: $primary;
+                    }
                 }
             }
 
             .active {
-                background-color: $primary;
-                color: $white;
+                background-color: $white;
+                color: $primary;
             }
         }
     }
 
     .areawrap {
-        padding: 3.25rem 0;
+        padding: 4.125rem 0 4.9375rem;
 
         @media screen and (max-width: 576px) {
             padding: 2.75rem 0;
@@ -362,12 +378,12 @@ section.areas {
         }
     }
 
-    div.areas_droplist {
+    .areas_droplist {
         position: relative;
         z-index: 9;
     }
 
-    div.areas_droplist > div.caption {
+    .areas_droplist > .caption {
         border: 1px solid #c4c4c4;
         padding: 11px 24px;
         border-radius: 0;
@@ -388,7 +404,7 @@ section.areas {
         }
     }
 
-    div.areas_droplist > div.list {
+    .areas_droplist > .list {
         position: absolute;
         background-color: #f2f2f2;
         width: 100%;
@@ -396,28 +412,28 @@ section.areas {
         display: none;
     }
 
-    div.areas_droplist > div.list > div.item {
+    .areas_droplist > .list > .item {
         padding: 11px 24px;
         background-color: #cecece;
         cursor: pointer;
     }
 
-    div.areas_droplist > div.list > div.item.selected {
+    .areas_droplist > .list > .item.selected {
         font-weight: bold;
     }
 
-    div.areas_droplist > div.caption:hover,
-    div.areas_droplist > div.list > div.item:hover {
+    .areas_droplist > .caption:hover,
+    .areas_droplist > .list > .item:hover {
         background-color: $primary;
         color: #fff;
     }
 
-    div.areas_droplist.open > div.caption {
+    .areas_droplist.open > .caption {
         border-radius: 3px 3px 0 0;
         border-bottom: solid 1px #999;
     }
 
-    div.areas_droplist.open > div.list {
+    .areas_droplist.open > .list {
         display: block;
         z-index: 99;
     }
