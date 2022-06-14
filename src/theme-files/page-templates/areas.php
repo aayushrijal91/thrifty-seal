@@ -89,11 +89,8 @@ $the_query = new WP_Query($args);
     </section>
 </section>
 
-<section class="map">
-    <iframe style="border: 0;" src="<?= get_field('map') ?>" allowfullscreen="allowfullscreen"></iframe>
-</section>
-
 <?php
+get_template_part('parts/section', 'map');
 get_template_part('parts/section', 'solutions');
 get_footer();
 ?>
