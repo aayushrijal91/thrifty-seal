@@ -9,5 +9,6 @@ get_template_part('parts/section', 'banner');
 ?>
 
 <?php
+get_template_part('parts/section', 'compare-slider');
 get_footer();
 ?>
