@@ -295,6 +295,20 @@ section.contact-us {
                 font-size: 0.875rem;
                 padding: 18.5px 16px;
                 line-height: 1;
+                margin: 55px 0 41px;
+            }
+
+            .file_upload_heading {
+                color: $darker-grey;
+                font-size: 1.5rem;
+                line-height: 1.341;
+            }
+
+            .file_upload_subHeading {
+                color: $grey;
+                font-weight: 800;
+                font-size: 1.125rem;
+                line-height: 1.616;
             }
         }
     }
