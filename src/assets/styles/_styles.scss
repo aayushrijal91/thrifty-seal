@@ -169,6 +169,52 @@ section.services {
     }
 }
 
+section.service_inner {
+    padding-top: 139px;
+    
+    .heroHeading {
+        color: $darker-grey;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.111;
+    }
+
+    .no-hidden-cost {
+        background: $primary;
+        background-size: contain;
+        color: $white;
+        padding: 23px 16px 23px 29px;
+        height: 135px;
+    }
+
+    .service_card {
+        margin: 57px 0;
+
+        .service_card_inner {
+            padding: 107px 50px;
+
+            &.left_to_right {
+                background: linear-gradient(90deg, $darker-grey 0 60%, rgba(0, 0, 0, 0) 80% 100%);
+            }
+
+            &.right_to_left {
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0 20%, $darker-grey 40% 100%);
+            }
+
+            .service-description p {
+                letter-spacing: -0.02em;
+                font-size: 1.875rem;
+                color: $white;
+                font-weight: 500;
+                line-height: 1.43;
+                margin-bott span {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
 section.areas {
     .areatop {
         padding: 4rem 0;

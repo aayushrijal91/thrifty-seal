@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Gallery
- * The Service page
+ * The Gallery page
  *
  */
 get_header();
