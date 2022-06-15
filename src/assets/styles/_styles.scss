@@ -655,15 +655,40 @@ section.faq {
 }
 
 section.quick-contact {
+    padding: 114px 0 132px;
+
     .quick-contact-main {
         background: $primary;
-        padding: 55.5px 0 43px;
+        padding: 55.5px 16px 43px;
 
-        .heroHeading {
+        .heroHeading, .subHeading {
             font-weight: 700;
             letter-spacing: -0.02em;
+            color: $white;
+            text-align: center;
             line-height: 1.111;
+        }
+
+        .heroHeading {
             font-size: 3.929375rem;
+        }
+
+        .subHeading {
+            font-size: 1.72875rem;
+            padding-top: 12px;
+        }
+
+        .btn {
+            color: $white;
+            border-radius: 0;
+            padding: 24px 16px;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+            font-size: 1.25rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 0.875rem;
+            }
         }
     }
 }
