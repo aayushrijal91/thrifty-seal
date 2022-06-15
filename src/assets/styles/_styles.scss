@@ -655,13 +655,14 @@ section.faq {
 }
 
 section.quick-contact {
-    padding: 114px 0 132px;
+    padding-bottom: 132px;
 
     .quick-contact-main {
         background: $primary;
         padding: 55.5px 16px 43px;
 
-        .heroHeading, .subHeading {
+        .heroHeading,
+        .subHeading {
             font-weight: 700;
             letter-spacing: -0.02em;
             color: $white;
@@ -689,6 +690,20 @@ section.quick-contact {
             @include media-breakpoint-down(sm) {
                 font-size: 0.875rem;
             }
+        }
+    }
+}
+
+section.gallery {
+    padding: 76px 0;
+
+    .gallery-compare-wrapper {
+        padding: 38px 25px;
+
+        .before-img,
+        .after-img {
+            object-fit: cover;
+            height: 100%;
         }
     }
 }

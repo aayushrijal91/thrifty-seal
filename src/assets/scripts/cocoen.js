@@ -43,7 +43,7 @@ var Cocoen=(()=>{var g=Object.defineProperty;var b=(n,e)=>{for(var t in e)g(n,t,
   }
 
   #drag:before {
-    background: url('wp-content/themes/aiims/images/icons/dragger.png');
+    background: url(https://permaseal.net.au/assets/images/icons/dragger.png);
     content: '';
     height: 63px;
     width: 63px;
