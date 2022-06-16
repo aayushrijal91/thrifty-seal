@@ -5,16 +5,16 @@ $logo = get_field('logo', 'options');
     <div class="footer-top-bar">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-xl-6">
+                <div class="col-md-7">
                     <div class="text-white fw-600 h10">Don't pay for services you don't need! Get a FREE QUOTE today with no hidden extras.</div>
                     <div class="h25 text-grey pt-3 fw-500">Get In Touch With Thrifty Seal to save Today!</div>
                 </div>
-                <div class="col-lg-4 pt-4 pt-md-0">
+                <div class="col-md-5 col-lg-4 pt-4 pt-md-0">
                     <div class="row no-gutters">
-                        <div class="col-6 pr-1">
+                        <div class="col-6 col-md-12 col-lg-6 pr-1 pr-md-0 pr-lg-1 py-md-1 py-lg-0">
                             <a href="<?= get_site_url() ?>/contact-us" class="btn btn-primary btn-block rounded-0 text-white text-uppercase fw-600 h25">Contact Us</a>
                         </div>
-                        <div class="col-6 pl-1">
+                        <div class="col-6 col-md-12 col-lg-6 pl-1 pl-md-0 pl-lg-1 py-md-1 py-lg-0">
                             <a href="<?= get_site_url() ?>/contact-us" class="btn btn-dark-grey btn-block rounded-0 text-white text-uppercase fw-600 h25">Get A free quote</a>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ $logo = get_field('logo', 'options');
             <div class="description">Once you book in your <span class="fw-800 text-primary">FREE ONSITE QUOTE,</span> Thrifty Seal will come to your home & give you an on-the-spot assessment & price with no hidden extras.</div>
             <hr>
             <div class="row justify-content-between align-items-center">
-                <div class="col-12 col-md-auto"><a class="navbar" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" class="w-100" alt="<?= $logo['alt']; ?>" /></a></div>
+                <div class="col-12 col-md col-lg-auto"><a class="navbar" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" class="w-100" alt="<?= $logo['alt']; ?>" /></a></div>
                 <div class="col-auto pt-4 pt-md-0"><img src="<?= get_template_directory_uri() ?>/images/icons/payment-methods.png"></div>
             </div>
         </div>
