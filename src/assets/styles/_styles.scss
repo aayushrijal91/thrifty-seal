@@ -48,6 +48,7 @@ header.header {
 
     .header-bottom-bar {
         background: $dark;
+        position: relative;
 
         .nav-link {
             color: $white;
@@ -67,6 +68,22 @@ header.header {
 
             @include media-breakpoint-up(xxl) {
                 padding: 29.5px 53px;
+            }
+        }
+
+        .service-menu-dropdown {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            background: #1f2024;
+            padding: 154px 0;
+            // display: none;
+            z-index: 10000;
+
+            .service-dropdown-caption {
+                color: $white;
+                font-size: 1.32rem;
+                padding-top: 17px;
             }
         }
 

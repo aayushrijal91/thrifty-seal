@@ -1,5 +1,5 @@
 <?php
-// Jobs
+// Services
 add_action('init', 'init_services_custom_post_type');
 function init_services_custom_post_type() {
     $labels = array(

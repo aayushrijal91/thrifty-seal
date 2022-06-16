@@ -110,6 +110,15 @@ jQuery(function ($) {
                         $('.areas_droplist > .list > .item').removeClass('active selected');
                         $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').text($(this).text());
                     });
+
+                    $(".nav-item.menu-item-has-children").find("> .nav-link").addClass('dropdown-toggle');
+
+                    if($(window).width() < 1500) {
+                        $(".nav-item.menu-item-has-children .nav-link.dropdown-toggle").on('click', function(e){
+                            e.preventDefault();
+                            $('.dropdown > .dropdown-menu').slideToggle();
+                        })
+                    }
                 });
             }, // end misc
         }, // end ui

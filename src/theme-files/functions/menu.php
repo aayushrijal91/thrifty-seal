@@ -4,6 +4,7 @@
 function register_menus()
 {
     register_nav_menu('primary', _('Primary Menu'));
+    register_nav_menu('services', _('Services Menu'));
 }
 
 add_action('init', 'register_menus');
