@@ -40,7 +40,7 @@ header.header {
         .social-icon {
             padding: 8px 15px;
 
-            @include media-breakpoint-between(lg,xl) {
+            @include media-breakpoint-between(lg, xl) {
                 padding: 8px;
             }
         }
@@ -58,8 +58,8 @@ header.header {
             @include media-breakpoint-up(md) {
                 padding: 16px;
             }
-            
-            @include media-breakpoint-up(xl){
+
+            @include media-breakpoint-up(xl) {
                 border-left: 1px solid $dark-grey;
                 padding: 29.5px 50px;
                 text-align: center;
@@ -516,7 +516,7 @@ section.areas {
             padding-bottom: 48px;
 
             @include media-breakpoint-down(sm) {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -618,7 +618,11 @@ section.areas {
 
         .arealistwrap {
             .arealist {
-                padding-bottom: 144px;
+                padding-bottom: 48px;
+
+                @include media-breakpoint-up(md) {
+                    padding-bottom: 144px;
+                }
 
                 .alphabet-title {
                     font-size: 6rem;
@@ -631,13 +635,23 @@ section.areas {
                     align-items: center;
                     color: $white;
                     background-color: $darker-grey;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 2.5rem;
+                        height: 64px;
+                        width: 64px;
+                    }
                 }
 
                 ul {
                     margin-bottom: 0;
                     display: grid;
-                    grid-template-columns: 33.33% 33.33% 33.33%;
                     grid-gap: 0 2rem;
+                    grid-template-columns: auto;
+
+                    @include media-breakpoint-up(md) {
+                        grid-template-columns: 33.33% 33.33% 33.33%;
+                    }
 
                     li {
                         display: inline-block;
@@ -650,6 +664,10 @@ section.areas {
 
                             &:hover {
                                 color: $primary;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                font-size: 0.875rem;
                             }
                         }
                     }
@@ -682,17 +700,13 @@ section.areas {
             display: none;
         }
 
-        h2 {
-            font-size: 3.6rem;
-            text-align: center;
-            font-style: italic;
-            margin-bottom: 7rem;
-        }
-
         .areas_loadMoreWrap {
             position: relative;
             text-align: center;
-            padding: 3rem 0 1.6rem;
+
+            @include media-breakpoint-up(md) {
+                padding: 3rem 0 1.6rem;
+            }
 
             a {
                 font-weight: bold;
@@ -708,6 +722,10 @@ section.areas {
                 &:hover {
                     background-color: $secondary;
                     color: $white;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 0.875rem;
                 }
             }
         }
@@ -893,20 +911,38 @@ section.solutions {
 
 section.suburb {
     background: $white;
-    padding: 114px 0 45px;
+    padding: 64px 0 0;
+
+    @include media-breakpoint-up(lg){
+        padding: 80px 0 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 114px 0 45px;
+    }
 
     .heading {
         color: $darker-grey;
         font-weight: 700;
         font-size: 4rem;
 
+        @include media-breakpoint-down(lg) {
+            font-size: 3rem;
+            line-height: 1;
+            padding-bottom: 24px;
+        }
+
         @include media-breakpoint-down(sm) {
-            font-size: 2rem;
+            font-size: 2.25rem;
         }
     }
 
     .suburb-description-card {
-        padding: 75px 0;
+        padding: 24px 0;
+
+        @include media-breakpoint-up(xl) {
+            padding: 75px 0;
+        }
 
         .sub-heading {
             color: $primary;
@@ -914,6 +950,14 @@ section.suburb {
             font-size: 2.25rem;
             font-weight: 700;
             padding-bottom: 41px;
+
+            @include media-breakpoint-down(lg) {
+                padding-bottom: 24px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 2rem;
+            }
         }
 
         p {
@@ -943,7 +987,7 @@ section.faq {
         font-size: 2.25rem;
         color: $black;
 
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
             font-size: 2rem;
         }
     }
