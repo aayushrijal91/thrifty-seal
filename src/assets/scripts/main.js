@@ -10,6 +10,32 @@ jQuery(function ($) {
                     duration: 1500,
                 });
                 $(() => {
+                    $(".cta__list").slick({
+                        slidesToShow: 4,
+                        arrows: false,
+                        responsive: [
+                            {
+                                breakpoint: 1600,
+                                autoplay:true,
+                                settings: {
+                                    slidesToShow: 3,
+                                }
+                            },
+                            {
+                                breakpoint: 1100,
+                                settings: {
+                                    slidesToShow: 2,
+                                }
+                            },
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 1,
+                                }
+                            }
+                        ]
+                    });
+
                     $(".accordion-head").on('click', function () {
                         $(".accordion-head").removeClass("active");
                         $(this).addClass('active');

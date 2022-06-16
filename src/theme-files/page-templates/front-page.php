@@ -25,7 +25,7 @@ get_template_part('parts/section', 'banner');
 </section>
 
 <?php
-get_template_part('parts/section', 'services');
+get_template_part('parts/section', 'cta');
 get_template_part('parts/section', 'solutions');
 get_template_part('parts/section', 'compare-slider');
 ?>
