@@ -22,14 +22,14 @@ $logo = get_field('logo', 'options');
     <header class="header">
         <div class="header-top-bar">
             <div class="container-fluid">
-                <div class="row justify-content-center justify-content-lg-between align-items-center pl-lg-4">
+                <div class="row justify-content-center justify-content-lg-between align-items-center pl-xxl-4">
                     <div class="col-auto col-xxl pt-4 pt-lg-0">
                         <a class="navbar-brand" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
                     </div>
-                    <div class="col-md-auto pt-4 pt-md-0">
+                    <div class="col-md-auto col-xl col-xxl-auto pt-4 pt-md-0">
                         <div class="row no-gutters align-items-center justify-content-center justify-content-md-between">
-                            <div class="col-md-6 col-lg-auto py-2 py-md-4 py-lg-0">
-                                <div class="text-uppercase text-white fw-600 h27 px-lg-4">
+                            <div class="col-md-6 col-lg col-xxl-auto py-2 py-md-4 py-lg-0">
+                                <div class="text-uppercase text-white fw-600 h27 px-lg-2 px-xxl-4">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-auto">
                                             <img src="<?= get_template_directory_uri() ?>/images/icons/header-top-dollar.png" class="pr-3">
@@ -38,8 +38,8 @@ $logo = get_field('logo', 'options');
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-5 col-lg-auto py-2 py-md-4 py-lg-0">
-                                <div class="text-uppercase text-white fw-600 h27 px-lg-5">
+                            <div class="col-md-5 col-lg col-xxl-auto py-2 py-md-4 py-lg-0">
+                                <div class="text-uppercase text-white fw-600 h27 px-lg-2 px-xxl-5">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-auto">
                                             <img src="<?= get_template_directory_uri() ?>/images/icons/header-top-hrs.png" class="pr-3">

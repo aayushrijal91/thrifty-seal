@@ -18,6 +18,10 @@ header.header {
             border-radius: 0;
             font-size: 1.4375rem; //23px
 
+            @include media-breakpoint-down(xl) {
+                font-size: 1.2rem;
+            }
+
             @include media-breakpoint-down(md) {
                 height: 64px;
                 font-size: 1rem;
@@ -31,6 +35,10 @@ header.header {
 
         .social-icon {
             padding: 8px 15px;
+
+            @include media-breakpoint-only(xl) {
+                padding: 8px;
+            }
         }
     }
 
@@ -49,6 +57,11 @@ header.header {
 
             @include media-breakpoint-up(lg) {
                 border-left: 1px solid $dark-grey;
+                padding: 29.5px 50px;
+                text-align: center;
+            }
+
+            @include media-breakpoint-up(xxl) {
                 padding: 29.5px 53px;
             }
         }
