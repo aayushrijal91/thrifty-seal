@@ -64,7 +64,8 @@ section.banner {
         line-height: 1.48;
 
         @include media-breakpoint-down(sm) {
-            font-size: 1rem;
+            font-size: 2.5rem;
+            line-height: 1;
         }
 
         span {
@@ -760,8 +761,12 @@ section.solutions {
         background: imgUrl("problem.jpg");
         background-size: cover;
         color: $white;
-        padding: 38px 60px;
-        min-height: 587.8px;
+        padding: 38px 24px;
+        
+        @include media-breakpoint-up(md) {
+            min-height: 587.8px;
+            padding: 38px 60px;
+        }
 
         ul.problem-list {
             padding-top: 14px;
@@ -771,6 +776,7 @@ section.solutions {
                 padding: 21px 0;
 
                 @include media-breakpoint-down(sm) {
+                    padding: 8px 0;
                     font-size: 1rem;
                 }
             }
@@ -782,8 +788,12 @@ section.solutions {
         background-size: cover;
         color: $black;
         text-align: right;
-        padding: 38px 60px;
-        min-height: 587.8px;
+        padding: 38px 24px;
+
+        @include media-breakpoint-up(md) {
+            min-height: 587.8px;
+            padding: 38px 60px;
+        }
 
         ul.solved-list {
             padding-top: 14px;
@@ -794,6 +804,7 @@ section.solutions {
                 font-weight: 500;
 
                 @include media-breakpoint-down(sm) {
+                    padding: 8px 0;
                     font-size: 1rem;
                 }
             }
@@ -927,11 +938,19 @@ section.faq {
 }
 
 section.quick-contact {
-    padding-bottom: 132px;
+    padding-bottom: 64px;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: 132px;
+    }
 
     .quick-contact-main {
         background: $primary;
-        padding: 55.5px 16px 43px;
+        padding: 43px 16px;
+
+        @include media-breakpoint-up(md) {
+            padding: 55.5px 16px 43px;
+        }
 
         .heroHeading,
         .subHeading {
@@ -944,11 +963,19 @@ section.quick-contact {
 
         .heroHeading {
             font-size: 3.929375rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 2.5rem;
+            }
         }
 
         .subHeading {
             font-size: 1.72875rem;
             padding-top: 12px;
+            
+            @include media-breakpoint-down(sm) {
+                font-size: 1.25rem;
+            }
         }
 
         .btn {
@@ -961,16 +988,26 @@ section.quick-contact {
 
             @include media-breakpoint-down(sm) {
                 font-size: 0.875rem;
+                padding: 12px 16px;
+                margin: 4px 0;
             }
         }
     }
 }
 
 section.gallery {
-    padding: 76px 0;
+    padding: 64px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 76px 0;
+    }
 
     .gallery-compare-wrapper {
-        padding: 38px 25px;
+        padding: 16px;
+
+        @include media-breakpoint-up(md) {
+            padding: 38px 25px;
+        }
 
         .before-img,
         .after-img {
@@ -1001,13 +1038,21 @@ footer {
         padding: 50px 0;
 
         .btn {
-            padding: 19px 16px;
+            padding: 12px 8px;
+
+            @include media-breakpoint-up(md) {
+                padding: 19px 16px;
+            }
         }
     }
 
     .footer-middle-bar {
         background-color: $dark;
-        padding: 87px 0 55px;
+        padding: 64px 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 87px 0 55px;
+        }
 
         .footer-column {
             h1,
@@ -1055,6 +1100,7 @@ footer {
 
             @include media-breakpoint-down(sm) {
                 font-size: 0.875rem;
+                padding: 24px 0 22px;
             }
         }
 

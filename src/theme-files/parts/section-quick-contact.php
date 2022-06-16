@@ -6,14 +6,14 @@
             <div class="row justify-content-center pt-5">
                 <div class="col-md-9 col-lg-7">
                     <div class="row no-gutters">
-                        <div class="col-4 px-2">
-                            <a href="" class="btn btn-block btn-dark">Get Quote</a>
+                        <div class="col-12 col-md-4 px-2">
+                            <a href="./" class="btn btn-block btn-dark">Get Quote</a>
                         </div>
-                        <div class="col-4 px-2">
-                            <a href="" class="btn btn-block btn-darker">Call Now</a>
+                        <div class="col-12 col-md-4 px-2">
+                            <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-block btn-darker">Call Now</a>
                         </div>
-                        <div class="col-4 px-2">
-                            <a href="" class="btn btn-block btn-black">Book Online</a>
+                        <div class="col-12 col-md-4 px-2">
+                            <a href="<?= get_site_url() ?>/contact-us" class="btn btn-block btn-black">Book Online</a>
                         </div>
                     </div>
                 </div>
