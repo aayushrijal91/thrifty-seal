@@ -22,6 +22,10 @@ header.header {
                 font-size: 1.2rem;
             }
 
+            @include media-breakpoint-down(lg) {
+                height: 80px;
+            }
+
             @include media-breakpoint-down(md) {
                 height: 64px;
                 font-size: 1rem;
@@ -36,7 +40,7 @@ header.header {
         .social-icon {
             padding: 8px 15px;
 
-            @include media-breakpoint-only(xl) {
+            @include media-breakpoint-between(lg,xl) {
                 padding: 8px;
             }
         }
@@ -52,10 +56,10 @@ header.header {
             padding: 8px 0;
 
             @include media-breakpoint-up(md) {
-                padding: 12px 0;
+                padding: 16px;
             }
-
-            @include media-breakpoint-up(lg) {
+            
+            @include media-breakpoint-up(xl){
                 border-left: 1px solid $dark-grey;
                 padding: 29.5px 50px;
                 text-align: center;
@@ -98,6 +102,10 @@ section.banner {
     padding: 80px 0;
 
     @include media-breakpoint-up(lg) {
+        padding: 100px 0;
+    }
+
+    @include media-breakpoint-up(xxl) {
         padding: 126.48px 0;
     }
 
@@ -1012,6 +1020,10 @@ section.quick-contact {
     padding-bottom: 64px;
 
     @include media-breakpoint-up(lg) {
+        padding-bottom: 80px;
+    }
+
+    @include media-breakpoint-up(xl) {
         padding-bottom: 132px;
     }
 
@@ -1056,7 +1068,7 @@ section.quick-contact {
                 font-size: 1.5rem;
             }
 
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 font-size: 1.25rem;
             }
         }
@@ -1069,7 +1081,7 @@ section.quick-contact {
             font-weight: 700;
             font-size: 1.25rem;
 
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 padding: 16px;
             }
 

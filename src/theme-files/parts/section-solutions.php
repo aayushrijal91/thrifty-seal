@@ -20,7 +20,7 @@
         <div class="row no-gutters">
             <div class="col-md-6 problem">
                 <div class="row no-gutters justify-content-end h-100">
-                    <div class="col-lg-8 col-xxl-6">
+                    <div class="col-lg-10 col-xl-8 col-xxl-6">
                         <div class="h16 fw-600"><?= get_field("problem_small_title", "options") ?></div>
                         <div class="text-uppercase letter-spacing-n02 fw-700 h2"><?= get_field("problem_hero_title", "options") ?></div>
                         <ul class="problem-list">
@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-6 solved">
                 <div class="row no-gutters h-100">
-                    <div class="col-lg-8 col-xxl-6">
+                    <div class="col-lg-10 col-xl-8 col-xxl-6">
                         <div class="h16 fw-600 text-capitalize"><?= get_field("solution_small_title", "options") ?></div>
                         <div class="text-uppercase letter-spacing-n02 fw-700 h2"><?= get_field("solution_hero_title", "options") ?></div>
                         <ul class="solved-list">
