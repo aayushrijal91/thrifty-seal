@@ -16,6 +16,12 @@ header.header {
             justify-content: center;
             align-items: center;
             border-radius: 0;
+            font-size: 1.4375rem; //23px
+
+            @include media-breakpoint-down(sm) {
+                font-size: 0.875rem;
+                height: 47px;
+            }
         }
 
         .social-icon {
@@ -30,8 +36,12 @@ header.header {
             color: $white;
             text-transform: uppercase;
             border-radius: 0;
-            padding: 29.5px 53px;
-            border-left: 1px solid #4e5057;
+            padding: 8px 0;
+
+            @include media-breakpoint-up(md) {
+                border-left: 1px solid $dark-grey;
+                padding: 29.5px 53px;
+            }
         }
 
         .btn {
@@ -40,11 +50,17 @@ header.header {
             border-radius: 0;
             padding: 16px;
             line-height: 1;
-            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-transform: uppercase;
+            height: 80px;
+            font-size: 1rem; //16px
+
+            @include media-breakpoint-down(sm) {
+                font-size: 0.875rem;
+                height: 47px;
+            }
         }
     }
 }
@@ -258,18 +274,19 @@ section.contact-us {
             input.form-control,
             select.form-control,
             textarea.form-control {
-                border: 1px solid #D1D1D1;
+                border: 1px solid #d1d1d1;
                 margin: 15px 0 38px;
                 background-color: $white;
                 font-size: 1.125rem;
                 color: $black;
 
                 &::placeholder {
-                    color: #E0E0E0;
+                    color: #e0e0e0;
                 }
             }
-            
-            input.form-control, select.form-control {
+
+            input.form-control,
+            select.form-control {
                 height: 65px;
             }
 
@@ -762,7 +779,7 @@ section.solutions {
         background-size: cover;
         color: $white;
         padding: 38px 24px;
-        
+
         @include media-breakpoint-up(md) {
             min-height: 587.8px;
             padding: 38px 60px;
@@ -972,7 +989,7 @@ section.quick-contact {
         .subHeading {
             font-size: 1.72875rem;
             padding-top: 12px;
-            
+
             @include media-breakpoint-down(sm) {
                 font-size: 1.25rem;
             }

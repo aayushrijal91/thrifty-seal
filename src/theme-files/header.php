@@ -22,30 +22,40 @@ $logo = get_field('logo', 'options');
     <header class="header">
         <div class="header-top-bar">
             <div class="container-fluid">
-                <div class="row justify-content-between align-items-center pl-4">
+                <div class="row justify-content-center justify-content-md-between align-items-center pl-md-4">
                     <div class="col-auto col-xxl">
                         <a class="navbar-brand" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" /></a>
                     </div>
-                    <div class="col-auto">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-auto">
-                                <div class="text-uppercase text-white fw-600 h27 px-4">
-                                    <img src="<?= get_template_directory_uri() ?>/images/icons/header-top-dollar.png" class="pr-3">We Don't want you to pay for services you do not need
+                    <div class="col-md-auto pt-4 pt-md-0">
+                        <div class="row no-gutters align-items-center justify-content-center">
+                            <div class="col-md-auto py-2 py-md-0">
+                                <div class="text-uppercase text-white fw-600 h27 px-md-4">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                            <img src="<?= get_template_directory_uri() ?>/images/icons/header-top-dollar.png" class="pr-3">
+                                        </div>
+                                        <div class="col">We Don't want you to pay for services you do not need</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <div class="text-uppercase text-white fw-600 h27 px-5">
-                                    <img src="<?= get_template_directory_uri() ?>/images/icons/header-top-hrs.png" class="pr-3">All Calls Answered Immediately
+                            <div class="col-md-auto py-2 py-md-0">
+                                <div class="text-uppercase text-white fw-600 h27 px-md-5">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                            <img src="<?= get_template_directory_uri() ?>/images/icons/header-top-hrs.png" class="pr-3">
+                                        </div>
+                                        <div class="col">All Calls Answered Immediately</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-block btn-black text-white h15 fw-800 px-4">$0 Call Out Fee</a>
+                            <div class="col-6 col-md-auto py-3 py-md-0">
+                                <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-block btn-black text-white fw-800 px-4">$0 Call Out Fee</a>
                             </div>
-                            <div class="col-auto">
-                                <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-block btn-primary text-white h15 fw-800 px-4"><?= get_field('phone_number', 'options') ?></a>
+                            <div class="col-6 col-md-auto py-3 py-md-0">
+                                <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-block btn-primary text-white fw-800 px-4"><?= get_field('phone_number', 'options') ?></a>
                             </div>
-                            <div class="col-auto pl-4 pr-2">
-                                <div class="row no-gutters">
+                            <div class="col-auto pl-md-4 pr-2 pt-3 pb-4 py-md-0">
+                                <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
                                         <?php if (have_rows('social_media', 'option')) : ?>
                                             <?php while (have_rows('social_media', 'option')) : the_row();
@@ -66,7 +76,7 @@ $logo = get_field('logo', 'options');
         <div class="header-bottom-bar">
             <div class="container">
                 <nav class="navbar navbar-expand-xl navbar-light p-0 px-xxl-5">
-                    <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-primary h25">Get a free on-site quote</a>
+                    <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-primary">Get a free on-site quote</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#baywashMainNav" aria-controls="baywashMainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
