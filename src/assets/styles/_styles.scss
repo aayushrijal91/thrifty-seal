@@ -942,6 +942,10 @@ section.faq {
         font-weight: 700;
         font-size: 2.25rem;
         color: $black;
+
+        @include media-breakpoint-down(sm){
+            font-size: 2rem;
+        }
     }
 
     @include media-breakpoint-up(lg) {

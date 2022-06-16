@@ -23,7 +23,7 @@ get_template_part('parts/section', 'banner');
                             <div class="main-question">
                                 <div class="row no-gutters">
                                     <div class="col-auto text-primary pr-2 pr-md-4">Q:</div>
-                                    <div class="col-auto"><?= get_sub_field('question') ?></div>
+                                    <div class="col"><?= get_sub_field('question') ?></div>
                                 </div>
                             </div>
                             <div class="plusminus">
