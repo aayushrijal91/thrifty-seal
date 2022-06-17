@@ -9,7 +9,21 @@ jQuery(function ($) {
                 AOS.init({
                     duration: 1500,
                 });
-                $(() => {
+                $(() => {                    
+                    $("#menu-item-73 a").append('<span class="pl-3"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.95947 1.42407L7.23725 6.42407L12.515 1.42407" stroke="#8DC63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>');
+
+                    $("#menu-item-73 a").hover(function(){
+                        $("#service-menu-dropdown").css('display','block');
+                    }, function(){
+                        $("#service-menu-dropdown").css('display','none');
+                    });
+
+                    $("#service-menu-dropdown").hover(function(){
+                        $(this).css('display','block');
+                    }, function(){
+                        $(this).css('display','none');
+                    });
+
                     $(".cta__list").slick({
                         slidesToShow: 4,
                         arrows: false,

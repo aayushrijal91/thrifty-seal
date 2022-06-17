@@ -80,7 +80,7 @@ $logo = get_field('logo', 'options');
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#baywashMainNav" aria-controls="baywashMainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="baywashMainNav">
+                    <div class="collapse navbar-collapse justify-content-between" id="thriftySealMainNav">
                         <?php wp_nav_menu(array(
                             'menu' => 'Primary Menu',
                             'menu_class' => 'navbar-nav w-100 justify-content-between',

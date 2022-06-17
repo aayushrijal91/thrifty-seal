@@ -50,7 +50,7 @@ header.header {
         background: $dark;
         position: relative;
 
-        .nav-link {
+        #thriftySealMainNav .nav-link {
             color: $white;
             text-transform: uppercase;
             border-radius: 0;
@@ -77,13 +77,36 @@ header.header {
             width: 100%;
             background: #1f2024;
             padding: 154px 0;
-            // display: none;
+            display: none;
             z-index: 10000;
+            transition: 0.4s all;
 
             .service-dropdown-caption {
                 color: $white;
                 font-size: 1.32rem;
                 padding-top: 17px;
+            }
+
+            ul#menu-services-menu {
+                flex-direction: row;
+
+                li a.nav-link {
+                    span {
+                        text-align: left;
+                        color: $white;
+                        font-size: 1.320625rem;
+                        line-height: 1;
+                        padding-top: 17px;
+                        transition: 0.2s all;
+                    }
+
+                    &:hover {
+                        span {
+                            color: $primary;
+                            transition: 0.2s all;
+                        }
+                    }
+                }
             }
         }
 
@@ -456,6 +479,10 @@ section.contact-us {
                 @include media-breakpoint-down(sm) {
                     height: 60px;
                 }
+            }
+
+            input[type="file"] {
+                display: none;
             }
 
             .terms-conditions {
