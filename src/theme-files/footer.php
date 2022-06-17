@@ -25,52 +25,52 @@ $logo = get_field('logo', 'options');
     <div class="footer-middle-bar">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-6 col-md-4 col-xl">
+                <div class="col-6 col-md-4 col-xl-1">
                     <div class="footer-column">
-                        <?php
-                        if (is_active_sidebar('footer_column_1')) {
-                            dynamic_sidebar('footer_column_1');
-                        }
-                        ?>
+                        <h2>Home</h2>
+                        <?php wp_nav_menu(array(
+                            'menu' => 'Footer Home Menu',
+                            'menu_class' => 'navbar-nav w-100 justify-content-between',
+                            'item_class' => 'nav-item',
+                            'link_class' => 'nav-link py-0',
+                            'container_class' => 'mobile-menu w-100',
+                            'container_id' => '',
+                        )); ?>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-xl">
+                <div class="col-6 col-md-4 col-xl-2">
                     <div class="footer-column">
-                        <?php
-                        if (is_active_sidebar('footer_column_2')) {
-                            dynamic_sidebar('footer_column_2');
-                        }
-                        ?>
+                        <h2>Services</h2>
+                        <?php wp_nav_menu(array(
+                            'menu' => 'Footer Service Menu 1',
+                            'menu_class' => 'navbar-nav w-100 justify-content-between',
+                            'item_class' => 'nav-item',
+                            'link_class' => 'nav-link py-0',
+                            'container_class' => 'mobile-menu w-100',
+                            'container_id' => '',
+                        )); ?>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-xl">
+                <div class="col-6 col-md-4 col-xl-2">
                     <div class="footer-column">
-                        <?php
-                        if (is_active_sidebar('footer_column_3')) {
-                            dynamic_sidebar('footer_column_3');
-                        }
-                        ?>
+                        <h2>Services</h2>
+                        <?php wp_nav_menu(array(
+                            'menu' => 'Footer Service Menu 2',
+                            'menu_class' => 'navbar-nav w-100 justify-content-between',
+                            'item_class' => 'nav-item',
+                            'link_class' => 'nav-link py-0',
+                            'container_class' => 'mobile-menu w-100',
+                            'container_id' => '',
+                        )); ?>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-xl">
+                <div class="col-6 col-md-4 col-xl-4">
                     <div class="footer-column">
-                        <?php
-                        if (is_active_sidebar('footer_column_4')) {
-                            dynamic_sidebar('footer_column_4');
-                        }
-                        ?>
+                        <h2>Contact Us</h2>
+                        <iframe src="<?= get_field('map', 'options') ?>" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-xl">
-                    <div class="footer-column">
-                        <?php
-                        if (is_active_sidebar('footer_column_5')) {
-                            dynamic_sidebar('footer_column_5');
-                        }
-                        ?>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-xl">
+                <div class="col-6 col-md-4 col-xl-auto">
                     <div class="social-column">
                         <?php if (have_rows('social_media', 'option')) : ?>
                             <?php while (have_rows('social_media', 'option')) : the_row();
@@ -90,7 +90,7 @@ $logo = get_field('logo', 'options');
             </div>
         </div>
         <div class="container">
-            <div class="description">Once you book in your <span class="fw-800 text-primary">FREE ONSITE QUOTE,</span> Thrifty Seal will come to your home & give you an on-the-spot assessment & price with no hidden extras.</div>
+            <div class="description">Once you book in your <span class="fw-800 text-primary">FREE ONSITE QUOTE</span> Thrifty Seal will come to your home & give you an on-the-spot assessment & price with no hidden extras.</div>
             <hr>
             <div class="row justify-content-between align-items-center">
                 <div class="col-12 col-md col-lg-auto"><a class="navbar" href="<?= home_url() ?>"><img src="<?= $logo['url']; ?>" class="w-100" alt="<?= $logo['alt']; ?>" /></a></div>

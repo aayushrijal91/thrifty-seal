@@ -5,6 +5,9 @@ function register_menus()
 {
     register_nav_menu('primary', _('Primary Menu'));
     register_nav_menu('services', _('Services Menu'));
+    register_nav_menu('footer_home', _('Footer Home Menu'));
+    register_nav_menu('footer_service_1', _('Footer Service Menu 1'));
+    register_nav_menu('footer_service_2', _('Footer Service Menu 2'));
 }
 
 add_action('init', 'register_menus');
