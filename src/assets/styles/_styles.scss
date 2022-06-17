@@ -71,12 +71,34 @@ header.header {
             }
         }
 
+        li#menu-item-846 {
+            display: none;
+        }
+
+        @include media-breakpoint-down(lg) {
+            li#menu-item-846 {
+                display: block;
+            }
+
+            li#menu-item-839 {
+                display: none;
+            }
+
+            ul.sub-menu.dropdown-menu {
+                background: $darker-grey;
+
+                li {
+                    padding: 0 16px;
+                }
+            }
+        }
+
         .service-menu-dropdown {
             position: absolute;
             top: 100%;
             width: 100%;
-            background: #1f2024;
-            padding: 154px 0;
+            background: $jet-black;
+            padding: 84px 0;
             display: none;
             z-index: 10000;
             transition: 0.4s all;
@@ -90,20 +112,24 @@ header.header {
             ul#menu-services-menu {
                 flex-direction: row;
 
-                li a.nav-link {
-                    span {
-                        text-align: left;
-                        color: $white;
-                        font-size: 1.320625rem;
-                        line-height: 1;
-                        padding-top: 17px;
-                        transition: 0.2s all;
-                    }
+                li {
+                    padding: 0 8px;
 
-                    &:hover {
+                    a.nav-link {
                         span {
-                            color: $primary;
+                            text-align: left;
+                            color: $white;
+                            font-size: 1.320625rem;
+                            line-height: 1;
+                            padding-top: 17px;
                             transition: 0.2s all;
+                        }
+
+                        &:hover {
+                            span {
+                                color: $primary;
+                                transition: 0.2s all;
+                            }
                         }
                     }
                 }
@@ -863,19 +889,12 @@ section.areas {
                     li {
                         display: inline-block;
                         padding: 0.25rem 0;
+                        font-size: 1.125rem;
+                        color: $grey;
+                        font-weight: 500;
 
-                        a {
-                            font-size: 1.125rem;
-                            color: $grey;
-                            font-weight: 500;
-
-                            &:hover {
-                                color: $primary;
-                            }
-
-                            @include media-breakpoint-down(sm) {
-                                font-size: 0.875rem;
-                            }
+                        @include media-breakpoint-down(sm) {
+                            font-size: 0.875rem;
                         }
                     }
 

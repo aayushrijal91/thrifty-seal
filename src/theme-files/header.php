@@ -77,7 +77,7 @@ $logo = get_field('logo', 'options');
             <div class="container px-md-0 px-lg-3">
                 <nav class="navbar navbar-expand-xl navbar-light p-0 px-xxl-5">
                     <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-primary">Get a free on-site quote</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#baywashMainNav" aria-controls="baywashMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#thriftySealMainNav" aria-controls="thriftySealMainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="thriftySealMainNav">

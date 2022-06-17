@@ -55,7 +55,7 @@ $the_query = new WP_Query($args);
                                     $suburb_name = str_replace("Plumber ", '', get_the_title());
                                     if (strpos($suburb_name, $char) === 0) {
                                         $liclass = str_replace(' ', '-', strtolower($suburb_name));
-                                        $htm3[$char] .= '<li class="' . $liclass . '"><a href="' . get_site_url() . "/areas/plumber-" . $liclass . '">' . 'Plumber ' . $suburb_name . '</a></li>';
+                                        $htm3[$char] .= '<li class="' . $liclass . '">Plumber ' . $suburb_name . '</li>';
                                     }
                                 endwhile;
                             } ?>
