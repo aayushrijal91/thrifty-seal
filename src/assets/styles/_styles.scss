@@ -219,6 +219,15 @@ section.banner {
     }
 }
 
+.content {
+    padding: 64px 0 48px;
+    
+    p {
+        color: $darker-grey;
+        font-weight: 600;
+    }
+}
+
 section.homepage-form {
     margin-top: -128px;
     margin-bottom: 139px;

@@ -7,7 +7,7 @@
                 <div class="col-md-11 col-lg-10 col-xl-7">
                     <div class="row no-gutters">
                         <div class="col-12 col-md-4 px-2">
-                            <a href="./" class="btn btn-block btn-dark">Get Quote</a>
+                            <a href="<?= (is_front_page() ? '#quote': get_site_url().'/#quote') ?>" class="btn btn-block btn-dark">Get Quote</a>
                         </div>
                         <div class="col-12 col-md-4 px-2">
                             <a href="tel: <?= get_field('phone_number', 'options') ?>" class="btn btn-block btn-darker">Call Now</a>

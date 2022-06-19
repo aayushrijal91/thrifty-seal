@@ -9,19 +9,19 @@ jQuery(function ($) {
                 AOS.init({
                     duration: 1500,
                 });
-                $(() => {                    
+                $(() => {
                     $("#menu-item-839 a").append('<span class="pl-3"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.95947 1.42407L7.23725 6.42407L12.515 1.42407" stroke="#8DC63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>');
 
-                    $("#menu-item-839 a").hover(function(){
-                        $("#service-menu-dropdown").css('display','block');
-                    }, function(){
-                        $("#service-menu-dropdown").css('display','none');
+                    $("#menu-item-839 a").hover(function () {
+                        $("#service-menu-dropdown").css('display', 'block');
+                    }, function () {
+                        $("#service-menu-dropdown").css('display', 'none');
                     });
 
-                    $("#service-menu-dropdown").hover(function(){
-                        $(this).css('display','block');
-                    }, function(){
-                        $(this).css('display','none');
+                    $("#service-menu-dropdown").hover(function () {
+                        $(this).css('display', 'block');
+                    }, function () {
+                        $(this).css('display', 'none');
                     });
 
                     $(".cta__list").slick({
@@ -30,7 +30,7 @@ jQuery(function ($) {
                         responsive: [
                             {
                                 breakpoint: 1600,
-                                autoplay:true,
+                                autoplay: true,
                                 settings: {
                                     slidesToShow: 3,
                                 }
@@ -48,6 +48,23 @@ jQuery(function ($) {
                                 }
                             }
                         ]
+                    });
+
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 1000) {
+                            $('#return-to-top').fadeIn();
+                            $("#return-to-top").addClass('active');
+                        } else {
+                            $('#return-to-top').fadeOut();
+                            $("#return-to-top").removeClass('active');
+                        }
+                    });
+
+                    $('#return-to-top').on('click', function () {
+                        $('body,html').animate({
+                            scrollTop: 0
+                        }, 1000);
+                        return false;
                     });
 
                     $(".accordion-head").on('click', function () {
@@ -127,8 +144,8 @@ jQuery(function ($) {
 
                     $(".nav-item.menu-item-has-children").find("> .nav-link").addClass('dropdown-toggle');
 
-                    if($(window).width() < 1500) {
-                        $(".nav-item.menu-item-has-children .nav-link.dropdown-toggle").on('click', function(e){
+                    if ($(window).width() < 1500) {
+                        $(".nav-item.menu-item-has-children .nav-link.dropdown-toggle").on('click', function (e) {
                             e.preventDefault();
                             $('.dropdown > .dropdown-menu').slideToggle();
                         })
@@ -144,18 +161,12 @@ jQuery(function ($) {
     //Engine.utils.sliders();
 });
 
-jQuery(window).scroll(function () {
-    if (jQuery(this).scrollTop() > 1000) {
-        jQuery('#back-top').fadeIn();
-        jQuery("#back-top").addClass('active');
-    } else {
-        jQuery('#back-top').fadeOut();
-        jQuery("#back-top").removeClass('active');
-    }
-});
-jQuery('#back-top').click(function () {
-    jQuery('body,html').animate({
-        scrollTop: 0
-    }, 1000);
-    return false;
+document.querySelectorAll('a[href="#quote"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
