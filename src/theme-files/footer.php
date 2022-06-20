@@ -15,7 +15,7 @@ $logo = get_field('logo', 'options');
                             <a href="<?= get_site_url() ?>/contact-us" class="btn btn-primary btn-block rounded-0 text-white text-uppercase fw-600 h25">Contact Us</a>
                         </div>
                         <div class="col-6 col-md-12 col-xl-6 pl-1 pl-md-0 pl-xl-1 py-md-1 py-xl-0">
-                            <a href="<?= (is_front_page() ? '#quote': get_site_url().'/#quote') ?>" class="btn btn-dark-grey btn-block rounded-0 text-white text-uppercase fw-600 h25">Get A free quote</a>
+                            <a href="<?= (is_front_page() ? '#quote' : get_site_url() . '/#quote') ?>" class="btn btn-dark-grey btn-block rounded-0 text-white text-uppercase fw-600 h25">Get A free quote</a>
                         </div>
                     </div>
                 </div>
@@ -138,6 +138,25 @@ $logo = get_field('logo', 'options');
         }
     }, false);
 </script>
+<?php
+if (get_the_ID() == 887) {
+?>
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-709699969/4YguCImH7aoBEIHTtNIC'
+        });
+    </script>
+<?php
+} else if (get_the_ID() == 890) {
+?>
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-709699969/XbI9CKmV6MYDEIHTtNIC'
+        });
+    </script>
+<?php
+}
+?>
 <?php wp_footer(); ?>
 </body>
 
